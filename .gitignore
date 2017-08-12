@@ -1,2 +1,7 @@
 *.class
 *.log
+/.idea/
+/spark-structured-streaming.iml
+/project/project/target/
+/project/target/
+/target/
