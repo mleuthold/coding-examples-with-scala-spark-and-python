@@ -3,15 +3,14 @@
 # python3.5 OneLiner.py --path ../../test/resources/Splitter/
 
 import argparse
+import glob
 import re
 
-import glob
 
 class OneLiner:
-
     # CONSTANTS AND VARS
 
-    FILE_NAME_PREFIX="TextFile"
+    FILE_NAME_PREFIX = "TextFile"
 
     # METHODS
 
