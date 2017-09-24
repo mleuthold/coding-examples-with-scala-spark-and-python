@@ -1,7 +1,7 @@
 import org.apache.spark.sql.SparkSession
 import org.scalatest.{BeforeAndAfterAll, Suite}
 
-trait WithSparkSession extends BeforeAndAfterAll {
+trait NewSparkSession extends BeforeAndAfterAll {
 
   self: Suite =>
 

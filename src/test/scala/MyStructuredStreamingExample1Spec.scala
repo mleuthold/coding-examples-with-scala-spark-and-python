@@ -1,21 +1,15 @@
 import MyStructuredStreamingExample1.{countWords, log}
-import com.holdenkarau.spark.testing.SharedSparkContext
 import org.apache.log4j.Level
 import org.apache.spark.sql.DataFrame
 import org.scalatest.FunSuite
-import org.scalatest.time.Seconds
 
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.collection.mutable.Stack
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
-import org.apache.spark.sql.functions._
 
-class MyStructuredStreamingExample1Spec extends FunSuite with WithSparkSession {
+class MyStructuredStreamingExample1Spec extends FunSuite with NewSparkSession {
 
   log.setLevel(Level.WARN)
 
-  test("start a netcat server for testing") {
+  ignore("start a netcat server for testing") {
 
     NetcatServer.async()
 
@@ -46,7 +40,7 @@ class MyStructuredStreamingExample1Spec extends FunSuite with WithSparkSession {
 //      start
 //  }
 
-  test("this is my test") {
+  ignore("this is my test") {
 
     val tableName = "temporaryTable"
 
@@ -81,7 +75,7 @@ class MyStructuredStreamingExample1Spec extends FunSuite with WithSparkSession {
 
   }
 
-  test("pop is invoked on a non-empty stack") {
+  ignore("pop is invoked on a non-empty stack") {
     val stack = new Stack[Int]
     stack.push(1)
     stack.push(2)
@@ -91,8 +85,7 @@ class MyStructuredStreamingExample1Spec extends FunSuite with WithSparkSession {
     assert(stack.size === oldSize - 1)
   }
 
-  test("pop is invoked on an empty stack") {
-
+  ignore("pop is invoked on an empty stack") {
     val emptyStack = new Stack[Int]
     intercept[NoSuchElementException] {
       emptyStack.pop()
