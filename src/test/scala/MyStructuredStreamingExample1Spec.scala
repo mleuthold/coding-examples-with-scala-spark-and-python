@@ -11,15 +11,15 @@ import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 import org.apache.spark.sql.functions._
 
-class ExampleSuite extends FunSuite with WithSparkSession {
+class MyStructuredStreamingExample1Spec extends FunSuite with WithSparkSession {
 
   log.setLevel(Level.WARN)
 
   test("start a netcat server for testing") {
 
-    Http.async()
+    NetcatServer.async()
 
-    Http.get("localhost", 9000, "")
+    NetcatServer.get("localhost", 9000, "")
 
   }
 

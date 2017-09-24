@@ -1,6 +1,6 @@
 import scala.sys.process._
 
-object Http {
+object NetcatServer {
   def async(fun: => Unit) {
     val t = new Thread(new Runnable { def run { fun } })
     t.start()
